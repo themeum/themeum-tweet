@@ -1,0 +1,186 @@
+/*
+* Plugin Name: Themeum Tweet
+* Plugin URI: http://www.themeum.com/item/themeum-tweet
+* Author: Themeum
+* Author URI: http://www.themeum.com
+* License - GNU/GPL V2 or Later
+* Description: Themeum Tweet is a Twitter feed display/slider plugin.
+* Version: 1.1
+*/
+
+/* List Layout */
+.list-layout .themeum-tweet-item {
+  border-bottom:1px solid #f5f5f5;
+  margin:0;
+  padding:15px 0;
+}
+.list-layout .themeum-tweet-item:first-child {
+  padding-top: 0;
+}
+.list-layout .themeum-tweet-item img.tweet-avatar {
+  display:block;
+  float:left;
+  margin:0 10px 0 0;
+}
+.list-layout .themeum-tweet-item .date,
+.list-layout .themeum-tweet-item .source {
+  font-size:10px;
+  line-height: normal;
+}
+.list-layout .themeum-tweet-item .date {
+  float:left;
+}
+.list-layout .themeum-tweet-item .source {
+  float:right;
+}
+.list-layout a.followme {
+  display:block;
+  background:url(../images/followme.png) no-repeat 0 5px;
+  margin-top:10px;
+  padding-left:20px;
+}
+
+/* Scroller Layout */
+.layout-scroller .themeum-tweet-item img.tweet-avatar {
+  display:block;
+  float:left;
+  margin:0 10px 0 0;
+}
+.layout-scroller .themeum-tweet-item .date,
+.layout-scroller .themeum-tweet-item .source {
+  font-size:10px;
+  line-height: normal;
+}
+.layout-scroller .themeum-tweet-item .date {
+  float:left;
+}
+.layout-scroller .themeum-tweet-item .source {
+  float:right;
+}
+.themeum-tweet.layout-scroller a.followme {
+  display:block;
+  background:url(../images/followme.png) no-repeat 0 5px;
+  margin-top:10px;
+  padding-left:20px;
+}
+
+/*Carousel Layout*/
+
+.themeum-tweet.carousel {
+  position: relative;
+  padding-bottom: 40px;
+}
+.themeum-tweet .carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.themeum-tweet .carousel-inner > .item{
+  text-align: center;
+}
+
+.themeum-tweet .carousel-inner > .item .tweet-avatar{
+  margin-bottom: 10px;
+}
+
+.themeum-tweet .carousel-inner > .item a.followme{
+  display: inline-block;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #333333;
+  border: 1px solid #222;
+  color: #fff;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+}
+
+.themeum-tweet .carousel-inner > .item a.followme:hover{
+  background-color: #444;
+}
+
+.themeum-tweet .carousel-inner > .item {
+  position: relative;
+  display: none;
+  -webkit-transition: .6s ease-in-out left;
+  transition: .6s ease-in-out left;
+}
+
+.themeum-tweet .carousel-inner > .active,
+.themeum-tweet .carousel-inner > .next,
+.themeum-tweet .carousel-inner > .prev {
+  display: block;
+}
+.themeum-tweet .carousel-inner > .active {
+  left: 0;
+}
+.themeum-tweet .carousel-inner > .next,
+.themeum-tweet .carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.themeum-tweet .carousel-inner > .next {
+  left: 100%;
+}
+.themeum-tweet .carousel-inner > .prev {
+  left: -100%;
+}
+.themeum-tweet .carousel-inner > .next.left,
+.themeum-tweet .carousel-inner > .prev.right {
+  left: 0;
+}
+.themeum-tweet .carousel-inner > .active.left {
+  left: -100%;
+}
+.themeum-tweet .carousel-inner > .active.right {
+  left: 100%;
+}
+
+.themeum-tweet .carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+}
+.themeum-tweet .carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.themeum-tweet .carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #000;
+}
+
+.themeum-tweet-alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ebccd1;
+  border-radius: 4px;
+  background-color: #f2dede;
+  color: #a94442;
+}
